@@ -1,3 +1,88 @@
-<h1>
-    Hello World
-</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Valeurs</title>
+    <style>
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-container input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container input[type="submit"] {
+            background-color: #409f85;
+            color: #ffffff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1> Boston House Price Prediction</h1>
+    <div class="form-container">
+        <form action="/predict" method="POST">
+            <label for="crim">CRIM:</label>
+            <input type="text" id="crim" name="CRIM" required="required">
+
+            <label for="zn">ZN:</label>
+            <input type="text" id="zn" name="ZN" required="required">
+
+            <label for="indus">INDUS:</label>
+            <input type="text" id="indus" name="INDUS" required="required">
+
+            <label for="chas">CHAS:</label>
+            <input type="text" id="chas" name="CHAS" required="required">
+
+            <label for="nox">NOX:</label>
+            <input type="text" id="nox" name="NOX" required="required">
+
+            <label for="rm">RM:</label>
+            <input type="text" id="rm" name="RM" required="required">
+
+            <label for="age">AGE:</label>
+            <input type="text" id="age" name="AGE" required="required">
+
+            <label for="dis">DIS:</label>
+            <input type="text" id="dis" name="DIS" required="required">
+
+            <label for="rad">RAD:</label>
+            <input type="text" id="rad" name="RAD" required="required">
+
+            <label for="tax">TAX:</label>
+            <input type="text" id="tax" name="TAX" required="required">
+
+            <label for="ptratio">PTRATIO:</label>
+            <input type="text" id="ptratio" name="PTRATIO" required="required">
+
+            <label for="b">B:</label>
+            <input type="text" id="b" name="B" required="required">
+
+            <label for="lstat">LSTAT:</label>
+            <input type="text" id="lstat" name="LSTAT" required="required">
+
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+<div>
+    {{prediction_text}}
+</div>
+
+</body>
+</html>
